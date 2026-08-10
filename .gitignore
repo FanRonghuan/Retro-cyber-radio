@@ -1,0 +1,29 @@
+# Dependencies and local tooling
+node_modules/
+.npm/
+.pnpm-store/
+
+# Build and runtime output
+dist/
+vite.log
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Temporary exports and caches
+*.tmp
+*.temp
+coverage/
+

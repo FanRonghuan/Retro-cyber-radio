@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <title>Retro Radio Player</title>
+  </head>
+  <body>
+    <main id="app">
+      <section class="stage" aria-label="Interactive radio model">
+        <div class="stage-topline"><span>RETRO CYBER RADIO</span><span id="modelState">STANDBY</span></div>
+        <canvas id="radioCanvas"></canvas>
+        <div class="stage-caption">Drag to inspect the radio. Use the physical controls to play.</div>
+      </section>
+      <aside class="player-panel" id="playerPanel" aria-label="Music player">
+        <header class="player-header"><span class="eyebrow">NOW PLAYING</span><button id="powerControl" class="power-control" aria-label="Power radio">POWER</button></header>
+        <section class="album-carousel" aria-label="Album carousel">
+          <button id="prevAlbum" class="arrow" aria-label="Previous album">&#8592;</button>
+          <div class="album-window"><div id="albumRail" class="album-rail"></div></div>
+          <button id="nextAlbum" class="arrow" aria-label="Next album">&#8594;</button>
+        </section>
+        <section class="track-info"><h1 id="trackTitle">Press Power</h1><p id="trackArtist">Retro Cyber Radio</p><a id="trackSource" class="track-source" href="#" target="_blank" rel="noreferrer">VIEW ZAPSPLAT SOURCE</a><small id="trackAttribution" class="track-attribution"></small><small id="playbackStatus" class="playback-status" role="status"></small></section>
+        <section class="transport" aria-label="Playback controls">
+          <button id="playControl" class="icon-button play-button" aria-label="Play"><img src="/icons/play.png" alt=""></button>
+          <button id="pauseControl" class="icon-button pause-button" aria-label="Pause"><img src="/icons/pause.png" alt=""></button>
+          <button id="nextTrack" class="icon-button next-button" aria-label="Next track"><img src="/icons/next.png" alt=""></button>
+          <label class="upload-button">LOAD MUSIC<input id="audioFile" type="file" accept="audio/*" /></label>
+        </section>
+        <div class="progress"><span id="currentTime">0:00</span><input id="seek" type="range" min="0" max="100" value="0" aria-label="Playback progress"><span id="duration">0:00</span></div>
+        <section id="playlist" class="playlist" aria-label="Playlist"></section>
+        <footer><span>VOLUME</span><input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume"><button id="exportGlb">EXPORT GLB</button></footer>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
